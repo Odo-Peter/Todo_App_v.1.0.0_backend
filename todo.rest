@@ -1,0 +1,56 @@
+POST http://localhost:3001/api/todos HTTP/1.1
+content-type: application/json
+
+{
+    "todo" : "Seems setting a boiler plate works fine",
+    "checked": "false"
+}
+
+###
+POST http://localhost:3001/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstname" : "Odo",
+    "lastname" : "Peter",
+    "username" : "Odopeter",
+    "password": "123456"
+}
+
+
+###
+POST http://localhost:3001/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "username" : "odopedro",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3001/api/todos HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9kb3BlZHJvIiwiaWQiOiI2NDc3NzUxM2Q0NjIxNTNlYmQwYWU0NjAiLCJpYXQiOjE2ODU1NTkwNjAsImV4cCI6MTY4NTU2MjY2MH0.tOCDgBj6Bm9Xxm9WuRWa77PRLmvb2hLEOiP9-GuA7HU
+
+{
+    "todo" : "King of the North",
+    "checked": "false",
+    "userId" : "64767f2d16f83dc1e266229e"
+
+}
+
+###
+DELETE http://localhost:3001/api/todos/647671bb31a9e1cdecc1e0a0 HTTP/1.1
+
+
+###
+PUT http://localhost:3001/api/todos/6476725bb19372d0c9cfb182 HTTP/1.1
+content-type: application/json
+
+{
+    "todo" : "Changed the checks to true, this is seen when its is being striked",
+    "checked": "true"
+}
+
+//647673d2fb2bf04987a34ff7
+
